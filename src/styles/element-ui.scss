@@ -1,0 +1,685 @@
+@import "./variables.scss";
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+.el-upload-list--picture .el-upload-list__item-thumbnail {
+  height: 80px;
+}
+.el-upload-list--picture .el-upload-list__item {
+  border: 1px dashed rgba(210, 217, 231, 1);
+  height: 1rem;
+}
+.el-upload-list__item .el-progress--line {
+  width: 80%;
+}
+.el-upload-list--picture .el-upload-list__item.is-success .el-upload-list__item-name {
+  line-height: 74px;
+  color: $mainText;
+  font-size: $fontSize-14;
+}
+.el-upload-list__item.is-success .el-upload-list__item-status-label {
+  display: none;
+}
+.el-upload-list__item .el-icon-close {
+  display: block;
+  top: 50%;
+  margin-top: -7px;
+  right: 0.12rem;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0.14rem;
+    height: 0.14rem;
+    background-image: url('../assets/images/icon-close.png');
+    background-size: cover;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+
+// fix date-picker ui bug in filter-item
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+// 全局修改按钮样式
+.el-button {
+  background-color: #fff;
+  border-color: $buttonColor;
+  color: $buttonColor;
+  border-radius: 0.06rem;
+  height: 0.32rem;
+  line-height: 0.22rem;
+  padding: 0.05rem 0.13rem;
+  font-size: $fontSize-12;
+  &:focus {
+    background-color: #fff;
+    border-color: $buttonColor;
+    color: $buttonColor;
+    border-radius: 0.06rem;
+    height:0.32rem;
+    line-height: 0.22rem;
+    padding: 0.05rem 0.13rem;
+    font-size: $fontSize-12;
+  }
+  &:hover {
+    background-color: $buttonColor;
+    color: $white;
+  }
+  &:active {
+    background-color: $buttonColor-active;
+    border-color: $buttonColor-active;
+    color: $white;
+    box-shadow: 0 0.08rem 0.12rem $shadowColor;
+  }
+  &:disabled {
+    background-color: #fff;
+    border-color: $buttonColor-disabled;
+    color: $buttoncolor-text-disabled;
+  }
+}
+
+.el-button--primary {
+  color: $white;
+  background-color: $buttonColor;
+  border-color: transparent;
+  box-shadow: 0 0.08rem 0.12rem $shadowColor;
+  &:focus {
+    color: $white;
+    background-color: $buttonColor;
+    border-color: transparent;
+    box-shadow: 0 0.08rem 0.12rem $shadowColor;
+  }
+  &:hover {
+    background-color: $buttonColor-hover;
+    color: $white;
+    border-color: transparent;
+  }
+  &:active {
+    background-color: $buttonColor-active;
+    color: $white;
+    border-color: transparent;
+  }
+  &:disabled {
+    background-color: $buttonColor-disabled;
+    color: $buttoncolor-text-disabled;
+  }
+}
+
+.el-button--warning {
+  color: $white;
+  background-color: $buttonColor-warning;
+  border-color: transparent;
+  box-shadow: 0 0.08rem 0.12rem $buttonColor-warning-shadow;
+  &:focus {
+    color: $white;
+    background-color: $buttonColor-warning;
+    border-color: transparent;
+    box-shadow: 0 0.08rem 0.12rem $buttonColor-warning-shadow;
+  }
+  &:hover {
+    background-color: $buttonColor-warning;
+    color: $white;
+    border-color: transparent;
+  }
+  &:active {
+    background-color: $buttonColor-warning;
+    color: $white;
+    border-color: transparent;
+    transform: scale(0.98);
+  }
+  &:disabled {
+    background-color: $buttonColor-warning;
+    color: $white;
+  }
+}
+
+.el-button--info {
+  background-color: $buttonColor2;
+  border-color: transparent;
+  color: $mainTextGray2;
+  &:focus {
+    background-color: $buttonColor2;
+    border-color: transparent;
+    color: $mainTextGray2;
+  }
+  &:hover {
+    background-color: $buttonColor2-hover;
+    border-color: transparent;
+    color: $mainTextGray2;
+  }
+  &:active {
+    background-color: $buttonColor2-active;
+    border-color: transparent;
+    color: $mainTextGray2;
+    box-shadow: none;
+  }
+  &:disabled {
+    background-color: $buttonColor2-disabled;
+    border-color: transparent;
+    color: $mainTextGray2;
+  }
+}
+
+.el-button--text {
+  border: none;
+  padding: 0;
+  height: auto;
+  line-height: 1;
+  color: $buttonColor;
+  background-color: transparent;
+  &:focus {
+    border: none;
+    padding: 0;
+    height: auto;
+    line-height: 1;
+    color: $buttonColor;
+    background-color: transparent;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $buttonColor-hover;
+  }
+  &:active {
+    color: $buttonColor-active;
+    box-shadow: none;
+  }
+}
+
+.el-select {
+  // margin-right: 0.08rem;
+  .el-input__icon {
+    line-height: 0.32rem;
+  }
+}
+.el-cascader {
+  line-height: normal;
+   .el-input__icon {
+    line-height: 0.32rem;
+  }
+}
+.el-cascader-panel {
+  font-size: $fontSize-12;
+}
+.el-date-editor.el-input, .el-date-editor.el-input__inner {
+  width: 100%;
+}
+.el-input {
+  .el-input__inner {
+    height: 0.32rem;
+    line-height: 0.22rem;
+    padding-left: 0.12rem;
+    border-radius: 0.06rem;
+    font-size: $fontSize-12;
+    font-family: $fontFamiy-Ios-Light;
+  }
+  .el-input__prefix {
+    left: auto;
+    right: 5px;
+  }
+}
+.el-date-editor {
+  .el-input__icon {
+    line-height: 0.32rem;
+  }
+  .el-input__inner {
+    padding-left: 0.12rem;
+  }
+  .el-input__suffix {
+    right: 0.3rem;
+    .el-input__suffix-inner {
+      position: relative;
+      .el-input__icon {
+        position: absolute;
+        // left: 0px;
+        &::before {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+.el-picker-panel__body-wrapper {
+  .el-date-picker__header {
+    line-height: 0;
+    .el-date-picker__header-label {
+      vertical-align: middle;
+    }
+  }
+}
+
+/* el-table 重置样式 */
+.table-data {
+  padding: 0.24rem 0.16rem;
+}
+.el-table-column--selection .cell {
+  // padding: 0 0 0 0.16rem !important;
+  padding-left: 0.1rem;
+}
+.el-table {
+  font-size: $fontSize-12;
+  tr {
+    background-color: #fff;
+  }
+  th {
+    color: $mainTextGray2;
+    border: none !important;
+  }
+  td {
+    color: $mainText;
+  }
+  td, 
+  th {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    padding: 0;
+    border: none;
+    &:first-child {
+      border-top-left-radius: 0.04rem;
+      border-bottom-left-radius: 0.04rem;
+
+      padding-left: 0.12rem;
+    }
+    &:last-child {
+      border-top-right-radius: 0.04rem;
+      border-bottom-right-radius: 0.04rem;
+      padding-right: 0.12rem;
+    }
+    &:nth-last-child(2) {
+      border-top-right-radius: 0.04rem;
+      border-bottom-right-radius: 0.04rem;
+    }
+  }
+   th:nth-last-child(2) {
+    padding-right: 0.12rem;
+  }
+   .cell {
+    line-height: 0.2rem;
+    cursor: default;
+  }
+   .index {
+    display: inline-block;
+    height: 0.32rem;
+    width: 0.45rem;
+    line-height: 0.32rem;
+    color: $mainTextGray;
+    border: 1px solid rgba(58, 73, 134, 0.15);
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  thead {
+    th {
+      background-color: rgba(92, 102, 140, 0.1);
+    }
+  }
+  tr.el-table__row--striped {
+    background-color: rgba(92, 102, 140, 0.03);
+  }
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: rgba(15, 111, 255, 0.4);
+  }
+  &::before {
+    content: none;
+  }
+  .caret-wrapper {
+    height: 22px;
+    .sort-caret.ascending {
+      top: -2px;
+    }
+    .sort-caret.descending {
+      bottom: 2px;
+    }
+  }
+  .descending .sort-caret.descending {
+    border-top-color: $mainText;
+  }
+  .ascending .sort-caret.ascending {
+    border-bottom-color: $mainText;
+  }
+
+  //重置表格 选择框样式
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #fff;
+    border-color: rgba(58, 73, 134, 0.15);
+  }
+  .el-checkbox__inner::after {
+    height: 6px;
+  }
+  .el-checkbox__input.is-checked .el-checkbox__inner::after {
+    border-color: $buttonColor;
+    border-width: 1.5px;
+  }
+
+  //自定义-列表 - tag / item
+  .tagBox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .tag {
+      padding: 0.04rem 0.08rem;
+      background-color: rgba(92, 102, 140, 0.7);
+      color: #fff;
+      border-radius: 3px;
+      margin: 0.04rem 0.1rem;
+      line-height: 0.2rem;
+    }
+  }
+}
+.el-table__fixed,
+.el-table__fixed-right {
+  height: 100% !important;
+  &::before {
+    content: none;
+  }
+}
+/* 分页 重置样式*/
+
+.el-pagination {
+  color: $mainText;
+  font-size: $fontSize-12;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin-top: 0.24rem;
+  position: relative;
+  .el-pager {
+    li {
+      min-width: 0.32rem;
+      height: 0.32rem;
+      line-height: 0.32rem;
+      border-radius: 6px;
+      &.active {
+        background-color: $buttonColor;
+        color: $white;
+        box-shadow: 0 8px 12px $shadowColor;
+        &:hover {
+          background-color: $buttonColor;
+          color: $white;
+        }
+      }
+      &:hover {
+        background-color: $buttonColor2-hover;
+        color: $mainText;
+      }
+    }
+  }
+  .btn-prev,
+  .btn-next {
+    padding: 0;
+    min-width: 0.32rem;
+    height: 0.32rem;
+    border-radius: 6px;
+    &:hover {
+      background-color: $buttonColor2-hover;
+      color: $mainText;
+    }
+  }
+  slot {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  span:not([class*="suffix"]) {
+    font-size: $fontSize-12;
+    color: $mainTextGray;
+    height: 0.32rem;
+    line-height: 2.6;
+  }
+  .el-pagination__jump {
+    margin-left: 0.16rem;
+    .el-pagination__editor {
+      margin: 0 0.05rem;
+      .el-input__inner {
+        padding: 0;
+      }
+    }
+  }
+}
+
+// from 表单全局样式
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-input__inner:focus,
+.el-form-item.is-error .el-textarea__inner,
+.el-form-item.is-error .el-textarea__inner:focus,
+.el-message-box__input input.invalid,
+.el-message-box__input input.invalid:focus {
+  border-color: rgba(255, 85, 85, 1);
+}
+.el-form-item__error {
+  border-color: rgba(255, 85, 85, 1);
+}
+
+// el-collape 全局样式
+
+.el-collapse {
+  border: none;
+  .el-collapse-item {
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0.16rem 0 0.16rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .el-collapse-item__wrap {
+      border: none;
+    }
+  }
+  .el-collapse-item__header {
+    border: none;
+    height: 0.46rem;
+    line-height: 0.46rem;
+    background-color: $bgColor-08;
+    color: $mainText;
+    font-size: $fontSize-14;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.36rem;
+    padding-right: 0.12rem;
+    position: relative;
+    .el-collapse-item__arrow {
+      font-size: $fontSize-12;
+      color: $mainTextGray2;
+      font-weight: 600;
+      position: absolute;
+      left: 0.16rem;
+      top: 50%;
+      margin-top: -0.06rem;
+    }
+    .el-button--text {
+      border: none;
+      padding: 0;
+      height: auto;
+      line-height: 1;
+      color: $mainText;
+      background-color: transparent;
+      i {
+        color: $mainTextGray2;
+      }
+      &:focus {
+        border: none;
+        padding: 0;
+        height: auto;
+        line-height: 1;
+        color: $mainText;
+        background-color: transparent;
+      }
+      &:hover {
+        background-color: transparent;
+        color: $mainTextGray2;
+      }
+      &:active {
+        color: $mainText;
+        box-shadow: none;
+      }
+    }
+  }
+  .el-collapse-item__content {
+    padding: 0 0.16rem;
+    color: $mainText;
+  }
+}
+
+// 对话框 样式全局
+.hideHead .el-dialog__header {
+  display: none;
+}
+.el-dialog {
+  border-radius: 10px;
+  .el-dialog__header {
+    padding: 0 0.24rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    position: relative;
+    .el-dialog__title {
+      font-size: $fontSize-16;
+      color: $mainText;
+    }
+    .el-dialog__headerbtn {
+      right: 0.16rem;
+      top: 50%;
+      margin-top: -0.08rem;
+      .el-icon-close {
+        font-size: $fontSize-16;
+        color: $mainTextGray2;
+        font-weight: 600;
+      }
+    }
+  }
+  .el-dialog__body {
+    padding: 0 0.24rem;
+    font-size: 0.12rem;
+  }
+  .el-dialog__footer {
+    padding: 0.32rem 0.24rem 0.24rem;
+  }
+}
+
+//重置提示框样式
+.el-popover--plain {
+  padding: 10px 15px;
+  line-height: 1;
+  width: auto !important;
+  min-width: auto !important;
+  max-width: 200px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+//重置 多选框 样式 el-checkbox-group
+
+  .el-checkbox {
+    margin-right: 0.16rem;
+    &.is-checked {
+      .el-checkbox__label {
+        color: $mainText;
+      }
+    }
+    .el-checkbox__label {
+      color: $mainText;
+      font-size: $fontSize-12;
+      padding-left: 0.04rem;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner,
+    .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: #fff;
+      border-color: rgba(58, 73, 134, 0.15);
+    }
+    .el-checkbox__inner::after {
+      height: 6px;
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner::after {
+      border-color: $buttonColor;
+      border-width: 1.5px;
+    }
+  }
+
+// 重置下拉菜单样式
+.el-scrollbar {
+  .el-select-dropdown__list {
+    padding: 0
+  }
+  .el-select-dropdown__item {
+    font-size: $fontSize-12;
+    padding: 0 0.2rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+  }
+}

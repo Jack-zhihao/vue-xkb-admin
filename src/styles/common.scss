@@ -1,0 +1,284 @@
+@import "@/styles/variables.scss";
+//导入字体
+@font-face {
+  font-family: "DINNextW1G Medium";
+  src: url("../assets/fonts/DINNextW1G/DINNextW1G-Medium.otf");
+}
+
+@font-face {
+  font-family: "DINNextW1G Light";
+  src: url("../assets/fonts/DINNextW1G/DINNextW1G-Light.otf");
+}
+
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+figure,
+figcaption {
+  margin: 0px;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 0.12rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+/* 清除点击出现虚拟框 */
+a {
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &:focus {
+    outline: 0;
+  }
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+}
+a img {
+  border: none;
+}
+input,
+textarea,
+select {
+  outline: none;
+  font: 0.12rem;
+}
+
+/* 清除浮动 */
+.clearfix {
+  *zoom: 1;
+  &:after {
+    display: block;
+    content: "\200B";
+    clear: both;
+    height: 0;
+  }
+}
+
+.clearPadding {
+  padding: 0 !important;
+}
+.clearMargin {
+  margin: 0 !important;
+}
+
+/* 通用条件筛选样式 common-condition */
+.common-condition {
+  padding: 0.08rem 0 0 0.16rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .condition {
+    display: flex;
+    padding: 0.16rem 0.16rem 0 0;
+    min-width: 1.3rem;
+    // &:nth-child(6n) {
+    //   padding-right: 0;
+    // }
+    .el-select,
+    .el-input .el-date-picker {
+      width: 100%;
+    }
+    .el-select {
+      .el-input {
+        .el-select__caret {
+          font-size: $fontSize-12;
+        }
+      }
+    }
+    &.condition--date {
+      .el-select,
+      .el-input .el-date-picker {
+        width: auto;
+      }
+    }
+  }
+}
+
+/* 通用表单样式 -- common-form */
+.common-form {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .el-form-item {
+    width: 20%;
+    min-width: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 0.16rem;
+    box-sizing: border-box;
+    margin: 0.24rem 0 0;
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+    .el-form-item__label-wrap {
+      margin: 0 !important;
+    }
+    .el-form-item__label {
+      position: relative;
+      text-align: left;
+      line-height: 1;
+      font-size: $fontSize-12;
+      color: $mainTextGray2;
+      margin-bottom: 0.08rem;
+    }
+    .el-form-item__content {
+      margin: 0 !important;
+      line-height: 0.32rem;
+    }
+    .el-select {
+      width: 100%;
+    }
+     .el-button--small.is-plain {
+      color: $mainText;
+      border-color: $border-color;
+      &:hover {
+        color: $mainText;
+        border-color: $border-color;
+      }
+      &:active {
+        color: $mainText;
+        border-color: $border-color;
+        box-shadow: none;
+        transform: scale(0.96);
+      }
+      &:focus {
+        color: $mainText;
+        border-color: $border-color;
+      }
+      .iconfont {
+        font-size: $fontSize-12;
+      }
+    }
+    .el-textarea__inner {
+      height: 0.86rem;
+    }
+    .upload-demo {
+      width: 50%;
+      .el-upload__tip {
+        margin: 0;
+        color: $mainTextGray;
+      }
+      .el-upload-list.el-upload-list--picture {
+        .el-upload-list__item {
+          margin-top: 0;
+        }
+        .el-upload-list__item-thumbnail {
+          width: auto;
+        }
+      }
+    }
+    //重置地区选择器样式
+    .distpicker-address-wrapper {
+      display: inline-block;
+      select {
+        padding: 0;
+        height: 0.32rem;
+        font-size: $fontSize-12;
+        border-radius: 0.06rem;
+        width: 1rem;
+        padding-left: 0.1rem;
+        margin-right: 0.06rem;
+      }
+    }
+    //单选框
+    .el-radio {
+      margin-right: 0.16rem;
+      font-size: $fontSize-12;
+      .el-radio__label {
+        padding-left: 0.04rem;
+        font-size: $fontSize-12;
+      }
+    }
+  }
+  .el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap > .el-form-item__label:before,
+  .el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before {
+    position: absolute;
+    right: 0;
+  }
+}
+
+//上传用户头像重置
+.avatar-uploader.common-avatar-uploader {
+  .el-upload--text {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #eeee;
+    border-radius: 0.06rem;
+    .avatar-uploader-icon {
+      font-size: 0.24rem;
+      color: $mainTextGray;
+    }
+  }
+}
+
+.limit-word {
+  .el-form-item__content {
+    position: relative;
+    .el-input__inner {
+      padding-right: 0.35rem;
+    }
+    > span {
+      font-size: $fontSize-12;
+      position: absolute;
+      right: 0.1rem;
+      top: 0;
+      line-height: 0.36rem;
+      color: $mainTextGray;
+    }
+  }
+}
+
+// 详情页 - pane-content 公共样式
+.pane-content {
+  padding: 0 10% 0.24rem;
+  box-sizing: border-box;
+  .info-row {
+    margin-top: 0.24rem;
+    &.info-row-last {
+      padding-bottom: 0.24rem;
+      border-bottom: 1px solid $border-color;
+    }
+    p {
+      text-align: left;
+      line-height: 0.22rem;
+      &:first-child {
+        color: $mainTextGray2;
+      }
+      &:nth-child(2) {
+        font-size: $fontSize-14;
+        margin-top: 0.08rem;
+        padding-right: 0.16rem;
+      }
+    }
+
+    img {
+      width: 1.5rem;
+      border-radius: 0.06rem;
+    }
+  }
+}

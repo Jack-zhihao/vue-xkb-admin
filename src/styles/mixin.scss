@@ -1,0 +1,31 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin pane_boxShadow {
+  box-shadow: 0 8px 12px rgba(13, 40, 86, 0.04);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@mixin nav_boxShadow {
+  &::after{
+    box-shadow: 0 4px 8px rgba(15, 111, 255, 0.16);
+  }
+}
+
+@mixin clearDistance {
+  &:first-child {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+}

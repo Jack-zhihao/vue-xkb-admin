@@ -1,0 +1,75 @@
+//基础颜色
+$sideBg:rgb(235, 236, 240);
+$containBg:rgba(245, 246, 250, 1);
+
+$red: #FF5555;
+$green:#19CBA9;
+$white: #fff;
+$yellow: #FFAA43;
+$blue: #0F6FFF;
+//基础背景色
+$bgColor-08: rgba(92, 102, 140, 0.08);
+$bgColor-06: rgba(92, 102, 140, 0.06);
+$bgColor-05: rgba(92, 102, 140, 0.06);
+// 文字颜色
+$mainText:rgba(69, 78, 112, 1);
+$mainTextGray2:rgba(69, 78, 112, 0.6);
+$mainTextGray:rgba(69, 78, 112, 0.4);
+$sideText:rgba(0, 0, 0, 0.4);
+$sideTextActive:rgba(45, 129, 252, 1);
+$textActive:rgba(45, 129, 252, 1);
+
+// 按钮颜色
+$buttonColor: #0F6FFF;
+$buttonColor-hover: #0083FF;
+$buttonColor-active: #1F5CEC;
+$buttonColor-disabled: rgba(0, 0, 0, 0.06);
+
+$buttoncolor-text-disabled: rgba(0, 0, 0, 0.2);
+
+$buttonColor2: rgba(0, 0, 0, 0.1);
+$buttonColor2-hover: rgba(0, 0, 0, 0.06);
+$buttonColor2-active: rgba(0, 0, 0, 0.14);
+$buttonColor2-disabled: rgba(0, 0, 0, 0.06);
+
+$buttonColor-warning: rgba(255, 170, 67, 1);
+
+//阴影颜色
+$shadowColor: rgba(15, 111, 255, 0.16);
+$buttonColor-warning-shadow: rgba(255, 170, 67, 0.16);
+//border颜色
+$border-color:rgba(69, 78, 112, 0.1);
+$border-color-heavy: rgba(58, 73, 134, 0.15);
+
+$table-gray-1: rgba(92, 102, 140, 0.1);
+$table-gray-2: rgba(92, 102, 140, 0.03);
+
+//icon颜色
+$icon-blue:#43AFFF;
+$icon-yellow:#FFBD41;
+$icon-green:#97DF28;
+$icon-red:#FF5843;
+
+$color-red-up: rgba(255, 85, 85, 1);
+$color-red-down: rgba(25, 203, 169, 1);
+
+$icon-blue-bg:rgba(67, 175, 255, 0.15);
+$icon-yellow-bg:rgba(255, 189, 65, 0.15);
+$icon-green-bg:rgba(151, 223, 40, 0.15);
+$icon-red-bg:rgba(255, 88, 67, 0.15);
+
+//文字大小
+$fontSize-12: .12rem;
+$fontSize-14: .14rem;
+$fontSize-16: .16rem;
+
+$fontSize-20: .20rem;
+
+$fontFamiy-Ios-Medium: 'DINNextW1G Medium';
+$fontFamiy-Ios-Light: 'DINNextW1G Light';
+
+:export {
+  sideBg: $sideBg;
+  sideText: $sideText;
+  sideTextActive: $sideTextActive
+}
